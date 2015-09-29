@@ -4,8 +4,7 @@ class QuotesController < ApplicationController
   end
 
   def create
-    Quote.generate
-
+    GeneateQuotesJob.perform_later  
     redirect_to :back, success: 'The quotes were generated successfully.'
   end
 end
