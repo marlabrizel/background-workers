@@ -4,7 +4,7 @@ class QuotesController < ApplicationController
   end
 
   def create
-    GenerateQuotesJob.perform_later  
+    GenerateQuotesJob.(wait: 1.week).perform_later  
     redirect_to :back, success: 'The quotes were generated successfully.'
   end
 end
