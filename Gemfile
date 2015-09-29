@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'faker', '~> 1.5.0'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'pry'
